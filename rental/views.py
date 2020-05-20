@@ -1,9 +1,5 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.http import HttpResponse, Http404
-=======
-from django.http import HttpResponse
->>>>>>> 1b0238e1506683917da9bbff352f0e96276bd91b
 from .models import Movie
 
 # Create your views here.
@@ -20,7 +16,6 @@ from .models import Movie
 def index(request):
     all_movies = Movie.objects.all() #read the  movie table to list
     return render(request,'index.html',{'title':'Movies Catalog', 'movies': all_movies })
-<<<<<<< HEAD
 
 def details(request, movie_id):
     try:
@@ -33,17 +28,14 @@ def details(request, movie_id):
 
 def catalog(request):
     return render(request, 'catalog.html')
-=======
->>>>>>> 1b0238e1506683917da9bbff352f0e96276bd91b
 
 def about(request):
-    return HttpResponse('Art Lemus')
+    return render(request, 'about.html')
     
 def soon(request):
-<<<<<<< HEAD
     return render(request,'comingSoon.html')
 
+def order(request):
+    return render(request,'order.html')
 
-=======
-    return render(request,'comingSoon.html')
->>>>>>> 1b0238e1506683917da9bbff352f0e96276bd91b
+

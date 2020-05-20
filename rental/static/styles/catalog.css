@@ -1,0 +1,27 @@
+h2{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(243, 208, 54);
+}
+
+.catalog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.catalog img{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 450px;
+    border-radius: 5px;
+}
+
+.card h5 a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}

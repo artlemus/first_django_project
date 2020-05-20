@@ -1,0 +1,24 @@
+.order_form{
+    margin: 20px;
+    padding: 40px;
+    border: solid black;
+    border-radius: 10px;
+    background-color: darkred;
+    
+    justify-content: space-evenly;
+    
+    
+}
+
+.order{
+    display: flex;
+}
+
+.order img{
+    margin-top: 100px;
+    margin-right: 50px;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid black;
+}

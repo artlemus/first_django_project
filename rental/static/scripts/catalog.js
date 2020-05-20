@@ -21,17 +21,30 @@ function loadData(){
     });
 }
 function displayMovie(movie){
-    var tr = 
+    var card = 
     `
-    <tr>
-        <td><img src='${movie.image}'></td>
-        <td><a href="/movie/${movie.id}">${movie.title}</a></td>
-        <td>${movie.release_year}</td>
-        <td>${movie.price}</td>
-        <td>${movie.in_stock}</td>
-    </tr>
+
+    <div class="container_details">
+    <div class="card mb-3" style="max-width: 400px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="${movie.image}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+       <h5 class="card-title"><a href="/movie/${movie.id}">${movie.title}</a>
+       </h5>
+        <p class="card-text">Release Year: ${movie.release_year} <br> Price: $${movie.price}<br>In stock :${movie.in_stock}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+      
+      
     `
-    $(".catalog table tbody").append(tr);
+    $(".catalog").append(card);
+
 }
 
 function init() {

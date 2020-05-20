@@ -1,6 +1,45 @@
-{% extends "layouts.html" %} {% block content %}
-<h1>Catalog</h1>
+{% extends "layouts.html" %} 
 
+{% block styles %} 
+      <link rel="stylesheet" href="/static/styles/layouts.css">
+      <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container_index">
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to <h4>Vidly</h4></h1>
+  <p class="lead">A movie catalog!</p>
+  <hr class="my-4">
+  <p>A new way to browse for your favorite horror movies!</p>
+  <p class="lead">
+    <a class="btn btn-dark btn-sm" href="/catalog" role="button">Browse Catalog</a>
+  </p>
+  </div>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/static/images/elmstreet.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/frightmare.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/viddead.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<h2>Catalog (Static)</h2>
+<div class= "movie_table">
 <table class="table table-bordered table-striped">
   <thead class="thead-dark">
     <tr>
@@ -24,4 +63,5 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
 {% endblock %}
